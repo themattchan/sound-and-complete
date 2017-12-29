@@ -10,7 +10,7 @@ let
     ghcVersion = "ghc822";
 
     overrides = rec {
-      jailbreak = [ "cabal-helper" "ghc-mod" "liquidhaskell" ];
+      jailbreak = ["liquidhaskell" ];
       skipHaddock = justStaticExecutables;
       skipTests = [ "ghc-mod" ];
       justStaticExecutables = [ 
@@ -29,8 +29,7 @@ in
     # Haskell dependencies
     deps = hsPkgs: with hsPkgs; [
       brittany
-      ghc-mod
-      cabal-helper
+#      ghc-mod
 
       hpack
       ghcid
